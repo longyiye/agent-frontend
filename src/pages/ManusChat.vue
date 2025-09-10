@@ -43,13 +43,16 @@ function send() {
 	const qs = new URLSearchParams({ message: userText }).toString();
 	const url = `${base}?${qs}`;
 
-	let aiIndex = chatMessages.value.push({ role: 'ai', content: '' }) - 1;
 	start((chunk) => {
+		if (!chunk) return;
 		if (chunk === '[DONE]') {
 			stop();
 			return;
 		}
-		chatMessages.value[aiIndex].content += chunk;
+		const lines = String(chunk).split(/\r?\n/).filter(Boolean);
+		for (const line of lines) {
+			chatMessages.value.push({ role: 'ai', content: line });
+		}
 		scrollToBottom();
 	}, url);
 }
