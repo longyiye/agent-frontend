@@ -20,6 +20,7 @@
 import { ref, nextTick } from 'vue';
 import { useRoute } from 'vue-router';
 import { useSseChat } from '../composables/useSseChat';
+import { API_BASE_URL } from '../config/env.js';
 
 const listRef = ref(null);
 const input = ref('');
@@ -42,7 +43,7 @@ function send() {
 	scrollToBottom();
 
 	// 恋爱大师 SSE 接口
-	const base = 'http://localhost:8123/api/ai/love_app/chat/sse';
+	const base = `${API_BASE_URL}/ai/love_app/chat/sse`;
 	const qs = new URLSearchParams({ message: userText, chatId }).toString();
 	const url = `${base}?${qs}`;
 
@@ -64,5 +65,3 @@ function send() {
 .title { font-weight: 800; }
 .chat-id { color: var(--muted); font-size: 12px; }
 </style>
-
-

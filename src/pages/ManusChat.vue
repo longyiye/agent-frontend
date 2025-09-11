@@ -18,6 +18,7 @@
 <script setup>
 import { ref, nextTick } from 'vue';
 import { useSseChat } from '../composables/useSseChat';
+import { API_BASE_URL } from '../config/env.js';
 
 const listRef = ref(null);
 const input = ref('');
@@ -39,7 +40,7 @@ function send() {
 	scrollToBottom();
 
 	// Manus 接口（SseEmitter）
-	const base = 'http://localhost:8123/api/ai/manus/chat';
+	const base = `${API_BASE_URL}/ai/manus/chat`;
 	const qs = new URLSearchParams({ message: userText }).toString();
 	const url = `${base}?${qs}`;
 
@@ -63,5 +64,3 @@ function send() {
 .chat-page { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 .title { font-weight: 800; }
 </style>
-
-

@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { API_BASE_URL, TIMEOUT } from '../config/env.js';
 
 const http = axios.create({
-	baseURL: 'http://localhost:8123/api',
-	timeout: 30000,
+	baseURL: API_BASE_URL,
+	timeout: TIMEOUT,
 });
 
 http.interceptors.request.use((config) => {
