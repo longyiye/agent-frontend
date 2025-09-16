@@ -1,18 +1,18 @@
 <template>
 	<div class="home">
 		<div class="hero glass">
-			<h1>AI 应用合集</h1>
-			<p class="sub">探索恋爱话术与超级智能体，实时对话，灵感不停。</p>
+			<h1>AI 彩虹悸动</h1>
+			<p class="sub">探索同性恋爱话术与超级智能体，实时对话，灵感不停</p>
 		</div>
 		<nav class="nav">
 			<router-link to="/love" class="card glass">
-				<div class="icon gradient-pink"></div>
-				<div class="title">AI 恋爱大师</div>
+				<img class="icon" :src="candy" alt="candy" />
+				<div class="title">AI 同性恋爱大师</div>
 				<div class="desc">情感交流与话术灵感，甜度加倍</div>
 			</router-link>
 			<router-link to="/manus" class="card glass">
-				<div class="icon gradient-cyan"></div>
-				<div class="title">AI 超级智能体</div>
+				<img class="icon" :src="watermelon" alt="watermelon" />
+				<div class="title">AI 彩虹智能体</div>
 				<div class="desc">多步骤推理与执行，分步呈现</div>
 			</router-link>
 		</nav>
@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+import candy from '../assets/candy.svg';
+import watermelon from '../assets/watermelon.svg';
 </script>
 
 <style scoped>
@@ -44,11 +46,7 @@
 	transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .card:hover { transform: translateY(-3px); box-shadow: var(--glow); }
-.card .icon { width: 42px; height: 42px; border-radius: 12px; margin-bottom: 12px; }
-.gradient-pink { background: linear-gradient(135deg, #ff72b6, #7c5cff); box-shadow: 0 0 24px rgba(255,114,182,.35); }
-.gradient-cyan { background: linear-gradient(135deg, #00e0ff, #7c5cff); box-shadow: 0 0 24px rgba(0,224,255,.35); }
+.card .icon { width: 42px; height: 42px; border-radius: 12px; margin-bottom: 12px; object-fit: contain; }
 .card .title { font-size: 18px; margin-bottom: 6px; }
 .card .desc { font-size: 13px; font-weight: 500; color: var(--muted); }
 </style>
-
-

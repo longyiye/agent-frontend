@@ -86,7 +86,7 @@ button:active { transform: translateY(0); }
 }
 .bubble.user { background: linear-gradient(180deg, rgba(124,92,255,.25), rgba(124,92,255,.12)); border-color: color-mix(in srgb, var(--primary), white 8%); box-shadow: var(--glow); }
 .bubble.ai { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
-.chat-input { display: flex; gap: 10px; padding: 12px 0; border-top: 1px solid var(--stroke); }
+.chat-input { display: flex; gap: 10px; padding: 12px 0; border-top: 1px solid var(--stroke); margin-bottom: 35px; }
 .chat-input input {
   flex: 1;
   border: 1px solid var(--stroke);

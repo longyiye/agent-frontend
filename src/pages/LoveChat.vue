@@ -1,7 +1,7 @@
 <template>
 	<div class="chat-page chat-container">
 		<header class="header chat-header glass">
-			<div class="title">AI 恋爱大师</div>
+			<div class="title">AI 同性恋爱大师</div>
 			<div class="chat-id">ID: {{ chatId }}</div>
 		</header>
 		<section class="messages chat-stream" ref="listRef">

@@ -1,7 +1,7 @@
 <template>
 	<div class="chat-page chat-container">
 		<header class="header chat-header glass">
-			<div class="title">AI 超级智能体</div>
+			<div class="title">AI 彩虹智能体</div>
 		</header>
 		<section class="messages chat-stream" ref="listRef">
 			<div v-for="(m, i) in chatMessages" :key="i" class="chat-row" :class="m.role">
